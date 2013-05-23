@@ -52,7 +52,7 @@ function addNote() {
 
     if (!noteEmpty(note)) {
         localStorage.setItem(currentIndex, note);
-        $('#noteList').prepend('<li><a href="#shownote" data-transition="flip">'+note+'</a></li>');
+        $('#noteList').prepend('<li><a class="note" noteid="'+currentIndex+'" href="#shownote" data-transition="flip">'+note+'</a></li>');
         $('#noteList').listview('refresh');
         updateIndex();
         $('#note').val('');
